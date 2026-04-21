@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg
+      width="350"
+      height="500"
+      viewBox="0 0 350 500"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <g id="Frame 1">
+        <rect width="350" height="500" fill="white" />
+        <rect
+          id="rett-alto"
+          x="68"
+          y="76"
+          width="73"
+          height="73"
+          fill="black"
+        />
+        <rect
+          id="rett-mezo"
+          x="213"
+          y="149"
+          width="73"
+          height="73"
+          fill="black"
+        />
+        <rect
+          id="rett-basso"
+          x="89"
+          y="325"
+          width="73"
+          height="73"
+          fill="black"
+        />
+      </g>
+    </svg>
+
+    <script type="module">
+      import { animate, set, utils } from "https://esm.sh/animejs";
+
+      set("svg *", {
+        transformOrigin: "center",
+        transformBox: "fill-box",
+      });
+
+      animate("#rett-alto", {
+        rotate: "+=360",
+        ease: "linear",
+        duration: 6000,
+        delay: 0,
+        loop: true,
+      });
+
+      animate("#rett-mezo", {
+        rotate: "-=360",
+        ease: "linear",
+        duration: 3000,
+        delay: 0,
+        loop: true,
+      });
+    </script>
+  </body>
+</html>
